@@ -7,8 +7,7 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     padding-top: 42px;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: transparent;
 }
 
 .gobal-nav {
@@ -598,7 +597,7 @@ body {
     position: absolute;
     /* top: 30%; */
     left: 70%;
-    bottom: 91%;
+    bottom: 91.5%;
     transform: translate(-50%, -50%);
     height: 50px;
     width: 140px;
@@ -614,7 +613,7 @@ body {
 #macbook-end-down {
     position: absolute;
     left: 80%;
-    bottom: 91%;
+    bottom: 91.5%;
     transform: translate(-50%, -50%);
     height: 50px;
     width: 100px;
@@ -709,7 +708,7 @@ body {
     position: absolute;
     top: 21%;
     left: 75%;
-    bottom: 70%;
+    bottom: 50%;
     transform: translate(-50%, -50%);
     color: #1d1d1f;
     font-size: 25px;
@@ -720,7 +719,7 @@ body {
     position: absolute;
     /* top: 30%; */
     left: 70%;
-    bottom: 65%;
+    bottom: 77%;
     transform: translate(-50%, -50%);
     height: 50px;
     width: 140px;
@@ -736,7 +735,7 @@ body {
 #card-end-down {
     position: absolute;
     left: 80%;
-    bottom: 65%;
+    bottom: 77%;
     transform: translate(-50%, -50%);
     height: 50px;
     width: 100px;
@@ -872,4 +871,37 @@ body {
 
 .end a:hover {
     text-decoration: underline;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide-img {
+    height: 235px;
+    width: 417px;
+    margin-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-pack: start;
+    flex-shrink: 0;
+    animation: img 10s infinite cubic-bezier(0.53, 0.47, 1, 1);
+}
+
+@keyframes img {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-505%);
+        /* Keep it at the leftmost position */
+    }
 }
